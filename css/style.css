@@ -1,0 +1,214 @@
+﻿/* spec */
+:root {
+  --main-bg-color: #000051;
+  --secondary-bg-color: rgb(100, 115, 189);
+  --secondaryop-bg-color: rgba(100, 115, 189, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+nav {
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: whitesmoke;
+}
+
+h1 span {
+  color: red;
+}
+
+h2 {
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 50px;
+}
+
+canvas {
+  position: absolute;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  overflow: hidden;
+}
+
+header .container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header__btn {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid white;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 500;
+  color: whitesmoke;
+}
+
+.nav__link {
+  padding: 20px 45px;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.galery__case {
+  border: 1px solid black;
+  flex: 1 0 400px;
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  transition: 1s;
+  transform: perspective(300px);
+  background-image: url(https://venweb.com.ua/ru/wp-content/uploads/2018/10/3_tendencii_web_design-1024x682.jpg);
+  background-size: cover;
+}
+
+.galery__case:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--secondaryop-bg-color);
+  opacity: 0;
+  z-index: -1;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.galery__case:hover:before {
+  opacity: 1;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.galery__case:nth-child(odd) {
+  transition: 1s;
+  text-align: left;
+}
+
+.galery__case:nth-child(odd):hover {
+  transition: 1s;
+  text-align: left;
+  transform: perspective(300px) rotateY(3deg);
+}
+
+.galery__case:nth-child(even) {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.galery__case:nth-child(even):hover {
+  text-align: right;
+  transform: perspective(300px) rotateY(-3deg);
+  transition: 1s;
+}
+
+.galery__case:nth-child(odd) .galery__number {
+  right: -40px;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.galery__case:nth-child(even) .galery__number {
+  left: -40px;
+  transform: translateY(-50%) translateX(50%);
+}
+
+.galery__number {
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%);
+  font-size: 70px;
+  font-weight: 900;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.galery__case:hover .galery__number {
+  color: blueviolet;
+  transform: translateY(-50%) scale(1.3);
+  opacity: 1;
+}
+
+.galery__btn {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  border: 1px solid green;
+  width: 150px;
+  background-color: yellow;
+}
+
+.galery__btn:before {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  border: 1px solid green;
+  width: 150px;
+  background-color: yellow;
+}
+
+.galery__case_title {
+  margin-bottom: 13px;
+  font-size: 25px;
+  color: rgb(250, 245, 245);
+  text-shadow: 3px 3px 2px rgba(34, 60, 80, 0.45);
+}
+
+.galery__case_description {
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 3px 3px 2px rgba(34, 60, 80, 0.45);
+}
