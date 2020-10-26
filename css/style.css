@@ -1,14 +1,24 @@
 ﻿/* spec */
 :root {
-  --main-bg-color: #000051;
+  --main-bg-color: rgba(0, 0, 81, 1);
   --secondary-bg-color: rgb(100, 115, 189);
-  --secondaryop-bg-color: rgba(100, 115, 189, 0.7);
+  --secondaryop-bg-color: linear-gradient(
+    60deg,
+    rgba(4, 0, 81, 1) 7%,
+    rgba(10, 10, 134, 1) 25%,
+    rgba(54, 41, 198, 1) 67%
+  );
   --gradient-bg-color: radial-gradient(
     circle,
-    rgba(225, 70, 45, 0.9) 5%,
-    rgba(221, 57, 56, 0.8539390756302521) 28%,
-    rgba(198, 41, 90, 0.7) 88%
+    rgba(225, 70, 45, 1) 5%,
+    rgba(221, 57, 56, 0.9539390756302521) 28%,
+    rgba(198, 41, 90, 1) 88%
   );
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -50,7 +60,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 32px;
+  font-size: 40px;
   color: whitesmoke;
   background: var(--gradient-bg-color);
   margin-bottom: 10px;
@@ -59,7 +69,7 @@ h1 {
 
 .header__subtitle {
   color: white;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 800;
   background: var(--gradient-bg-color);
   margin-bottom: 20px;
@@ -71,8 +81,15 @@ h1 span {
 
 h2 {
   text-align: center;
-  font-size: 27px;
-  margin-bottom: 50px;
+  font-size: 35px;
+  font-weight: 800;
+  margin: 0px auto 40px;
+  color: var(--main-bg-color);
+  /* color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: var(--secondaryop-bg-color); */
+  opacity: 0.8;
 }
 
 canvas {
@@ -92,7 +109,7 @@ header .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .btn {
@@ -142,28 +159,49 @@ header .container {
   font-weight: 700;
 }
 
-main .container {
+main {
   display: flex;
   flex-direction: column;
+  /* height: 100vh; */
+}
+
+.galery__subtitle {
+  text-align: center;
+  margin: 40px auto 15px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--main-bg-color);
+  opacity: 0.3;
+}
+
+main .container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  align-content: space-between;
+  /* border: 1px solid green; */
 }
 
 .galery__case {
-  border: 1px solid black;
-  flex: 1 0 400px;
+  flex: 1 0 45%;
   width: 80%;
-  max-width: 700px;
+  max-width: 650px;
+  min-height: 45%;
+  height: 45%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 50px;
-  margin-bottom: 50px;
+  margin: 0 20px;
   position: relative;
-  transition: 1s;
+  transition: 0.3s;
   transform: perspective(300px);
   background-image: url(https://venweb.com.ua/ru/wp-content/uploads/2018/10/3_tendencii_web_design-1024x682.jpg);
   background-size: cover;
+  box-shadow: 0px 5px 30px 2px rgba(0, 0, 0, 0.45);
 }
 
 .galery__case:before {
@@ -172,17 +210,31 @@ main .container {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: var(--secondaryop-bg-color);
+  right: 0;
+  background: rgba(0, 0, 81, 0.5);
+  opacity: 0.5;
+  z-index: -1;
+  width: 100%;
+  transition: 0s;
+}
+
+.galery__case:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--secondaryop-bg-color);
   opacity: 0;
   z-index: -1;
   width: 0%;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
-.galery__case:hover:before {
-  opacity: 1;
+.galery__case:hover:after {
+  opacity: 0.75;
   width: 100%;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .galery__case:nth-child(odd) {
@@ -208,12 +260,12 @@ main .container {
 }
 
 .galery__case:nth-child(odd) .galery__number {
-  right: -40px;
+  right: 0px;
   transform: translateY(-50%) translateX(-50%);
 }
 
 .galery__case:nth-child(even) .galery__number {
-  left: -40px;
+  left: 0px;
   transform: translateY(-50%) translateX(50%);
 }
 
@@ -223,35 +275,40 @@ main .container {
   transform: translateY(-50%);
   font-size: 70px;
   font-weight: 900;
-  transition: 0.5s;
+  transition: 0.2s;
   opacity: 0;
 }
 
 .galery__case:hover .galery__number {
-  color: blueviolet;
-  transform: translateY(-50%) scale(1.3);
+  color: rgba(225, 70, 45, 1);
+  transform: perspective(60px) rotateY(3deg) translateY(-50%) scale(1.6);
   opacity: 1;
 }
 
 .galery__btn {
+  border: 1px solid rgba(243, 235, 235, 0.3);
   width: 200px;
-  color: #080855;
+  color: rgb(241, 230, 228);
   font-weight: 600;
 }
 
 .galery__btn:hover {
   color: white;
+  border: 1px solid red;
 }
 
 .galery__case_title {
   margin-bottom: 13px;
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: 800;
   color: rgb(250, 245, 245);
   text-shadow: 3px 3px 2px rgba(34, 60, 80, 0.45);
 }
 
 .galery__case_description {
   margin-bottom: 10px;
+  font-size: 18px;
+  font-style: italic;
   color: white;
   text-shadow: 3px 3px 2px rgba(34, 60, 80, 0.45);
 }
