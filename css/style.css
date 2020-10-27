@@ -163,9 +163,11 @@ main {
   display: flex;
   flex-direction: column;
   /* height: 100vh; */
+  position: relative;
 }
 
-.galery__subtitle {
+.galery__subtitle,
+.about__subtitle {
   text-align: center;
   margin: 40px auto 15px;
   font-size: 20px;
@@ -177,12 +179,15 @@ main {
 main .container {
   display: flex;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   height: 100vh;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   align-content: space-between;
   /* border: 1px solid green; */
+  padding-bottom: 50px;
 }
 
 .galery__case {
@@ -311,4 +316,67 @@ main .container {
   font-style: italic;
   color: white;
   text-shadow: 3px 3px 2px rgba(34, 60, 80, 0.45);
+}
+
+.about {
+  height: 80vh;
+}
+
+#containerAbout {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* align-items: center; */
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.about__description p {
+  text-align: left;
+  font-size: 20px;
+  /* flex: 1; */
+  text-indent: 1.5em;
+  margin-bottom: 45px;
+}
+
+.about__skills {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  /* align-items: center; */
+  /* height: 100%; */
+}
+
+.about__skills_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.about__skills_list li {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+li svg {
+  animation-name: rotatingForLi;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+
+  height: 60px;
+  width: auto;
+  transform: translate(0, 0) !important ;
+  margin-right: 20px;
+  margin-left: 20px;
+  vertical-align: middle;
 }
