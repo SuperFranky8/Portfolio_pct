@@ -326,7 +326,7 @@ main .container {
 }
 
 .about__heading {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
 }
 
 #containerAbout {
@@ -337,7 +337,7 @@ main .container {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100%;
 }
 
@@ -345,17 +345,9 @@ main .container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border: 2px solid cyan;
+  /* border: 2px solid cyan; */
   justify-items: center;
   justify-content: center;
-}
-
-.about__cv_decor {
-  /* width: 50%; */
-  flex: 1 0 640px;
-  border: 2px solid red;
-  height: 430px;
-  max-width: 645px;
 }
 
 .about__description {
@@ -370,7 +362,7 @@ main .container {
   /* align-items: center; */
   justify-content: flex-start;
   /* height: 100%; */
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 
 .about__description p {
@@ -400,6 +392,7 @@ main .container {
   margin: 0 0 20px;
   text-align: center;
   font-weight: 400;
+  transition: 0.5s;
 }
 
 li svg {
@@ -414,4 +407,157 @@ li svg {
   margin-right: 20px;
   margin-left: 20px;
   vertical-align: middle;
+}
+
+.about__skills_list li:hover {
+  transform: scale(1.3);
+}
+
+.about__cv_decor {
+  /* width: 50%; */
+  flex: 1 0 640px;
+  /* border: 2px solid red; */
+  height: 430px;
+  max-width: 645px;
+}
+
+.about__mockups {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.phone {
+  animation-name: phone__animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  position: absolute;
+  border-radius: 10px;
+  /* top: 50%; */
+  bottom: 15px;
+  left: -5px;
+  height: 45%;
+  border-radius: 15px;
+  /* background-size: 98px 198px; */
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  transform: perspective(1000px) translateY(5%) rotateY(-28deg) rotateX(3deg);
+  transition: 0.5s;
+}
+
+.mockup {
+  /* position: relative; */
+  /* background-size: cover; */
+  height: 100%;
+}
+
+.tab {
+  animation-name: tab__animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+  position: absolute;
+  height: 55%;
+  z-index: 2;
+  /* top: 31%; */
+  bottom: 25px;
+
+  background-color: red;
+  background-size: cover;
+  left: 2%;
+  transform: perspective(1000px) translateY(5%) rotateY(-28deg) rotateX(3deg);
+  transition: 0.5s;
+  border-radius: 25px;
+}
+
+.pc {
+  animation-name: pc__animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+  position: absolute;
+  height: 80%;
+  left: 8%;
+  /* top: 7%; */
+  bottom: 35px;
+
+  z-index: 1;
+  transform: perspective(1000px) translateY(5%) rotateY(-28deg);
+  transition: 0.5s;
+  background-size: 300px auto;
+  background-size: cover;
+}
+
+@keyframes phone__animation {
+  0% {
+    background-image: url(https://chelseacore.com/wp-content/uploads/2019/10/D-yMIuGXUAAkqwp.jpg);
+  }
+
+  50% {
+    background-image: url(https://wallpaperaccess.com/full/2016840.jpg);
+  }
+  100% {
+    background-image: url(https://i.pinimg.com/originals/2a/f8/80/2af880a7df679349cb8f55449cc8586c.jpg);
+  }
+}
+
+@keyframes tab__animation {
+  0% {
+    background-image: url(https://chelseacore.com/wp-content/uploads/2019/10/D-yMIuGXUAAkqwp.jpg);
+  }
+
+  50% {
+    background-image: url(https://wallpaperaccess.com/full/2016840.jpg);
+  }
+  100% {
+    background-image: url(https://i.pinimg.com/originals/2a/f8/80/2af880a7df679349cb8f55449cc8586c.jpg);
+  }
+}
+
+@keyframes pc__animation {
+  0% {
+    background-image: url(https://chelseacore.com/wp-content/uploads/2019/10/D-yMIuGXUAAkqwp.jpg);
+  }
+
+  50% {
+    background-image: url(https://wallpaperaccess.com/full/2016840.jpg);
+  }
+  100% {
+    background-image: url(https://i.pinimg.com/originals/2a/f8/80/2af880a7df679349cb8f55449cc8586c.jpg);
+  }
+}
+
+.phone:hover {
+  /* top: 50%; */
+  bottom: 2px;
+  left: 10px;
+  height: 70%;
+  border-radius: 45px;
+  z-index: 3;
+  transform: perspective(800px) translateY(-10%) rotateY(0deg);
+}
+
+.tab:hover {
+  position: absolute;
+  height: 70%;
+  z-index: 2;
+  bottom: 0%;
+  left: 13%;
+  transform: perspective(800px) translateY(-10%) rotateY(0deg);
+}
+
+.pc:hover {
+  position: absolute;
+  /* height: 130%; */
+  top: 1%;
+  left: 15%;
+  z-index: 1;
+  transform: perspective(800px) translateY(5%) rotateY(0deg);
 }

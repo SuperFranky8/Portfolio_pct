@@ -71,6 +71,11 @@
   z-index: -1;
 }
 
+.animation__item:hover {
+  transform: translateX(75px) translateY(-10px) rotate(2turn);
+  opacity: 1;
+}
+
 .animation__item1 {
   animation-name: rotatingZ;
   animation-iteration-count: infinite;
