@@ -208,7 +208,7 @@ main .container {
   margin: 50px 0px;
   position: relative;
   transition: 0.3s;
-  
+
   transform: perspective(300px);
   background-image: url(https://venweb.com.ua/ru/wp-content/uploads/2018/10/3_tendencii_web_design-1024x682.jpg);
   background-size: cover;
@@ -216,7 +216,7 @@ main .container {
 }
 
 .galery__case:last-child {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .galery__case:before {
@@ -270,7 +270,6 @@ margin-bottom: 0;
   text-align: right;
   align-items: flex-end;
   transform: translateX(-35px);
-
 }
 
 .galery__case:nth-child(even):hover {
@@ -352,6 +351,7 @@ margin-bottom: 0;
   align-content: center;
   /* border: 1px solid red; */
   height: 100%;
+  padding-bottom: 150px;
 }
 
 .about__cv {
@@ -369,7 +369,7 @@ margin-bottom: 0;
   max-width: ;
 
   /* width: 50%; */
-  padding: 0 15px;
+  padding: 0 25px;
   flex-direction: column;
   /* width: 100%; */
   /* align-items: center; */
@@ -436,7 +436,6 @@ li svg {
   animation-timing-function: linear;
 }
 
-
 .about__skills_list li:hover {
   transform: scale(1.3);
 }
@@ -456,11 +455,11 @@ li svg {
 }
 
 .phone {
-  animation-name: phone__animation;
+  /* animation-name: phone__animation;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-direction: alternate;
+  animation-direction: alternate; */
   position: absolute;
   border-radius: 10px;
   /* top: 50%; */
@@ -474,6 +473,7 @@ li svg {
   z-index: 3;
   transform: perspective(1000px) translateY(5%) rotateY(-28deg) rotateX(3deg);
   transition: 0.5s;
+  background-image: url(../img/phonescreen.png);
 }
 
 .mockup {
@@ -483,11 +483,11 @@ li svg {
 }
 
 .tab {
-  animation-name: tab__animation;
+  /* animation-name: tab__animation;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-direction: alternate;
+  animation-direction: alternate; */
 
   position: absolute;
   height: 55%;
@@ -495,35 +495,43 @@ li svg {
   /* top: 31%; */
   bottom: 25px;
 
-  background-color: red;
   background-size: cover;
   left: 9%;
   transform: perspective(1000px) translateY(5%) rotateY(-28deg) rotateX(3deg);
   transition: 0.5s;
   border-radius: 25px;
+  background-image: url(../img/tabmak.png);
+  background-size: 99%;
+  background-position: 0 8px;
+  background-repeat: no-repeat;
+
 }
 
 .pc {
-  animation-name: pc__animation;
+  /* animation-name: pc__animation;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-direction: alternate;
+  animation-direction: alternate; */
 
   position: absolute;
   height: 80%;
-  left: 21%;
+  left: 18%;
   /* top: 7%; */
   bottom: 35px;
 
   z-index: 1;
   transform: perspective(1000px) translateY(5%) rotateY(-28deg);
   transition: 0.5s;
-  background-size: 300px auto;
-  background-size: cover;
+  /* background-size: 300px auto; */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/desktop.png);
+
 }
 
-@keyframes phone__animation {
+/* @keyframes phone__animation {
   0% {
     background-image: url(https://chelseacore.com/wp-content/uploads/2019/10/D-yMIuGXUAAkqwp.jpg);
   }
@@ -534,8 +542,8 @@ li svg {
   100% {
     background-image: url(https://i.pinimg.com/originals/2a/f8/80/2af880a7df679349cb8f55449cc8586c.jpg);
   }
-}
-
+} */
+/* 
 @keyframes tab__animation {
   0% {
     background-image: url(https://chelseacore.com/wp-content/uploads/2019/10/D-yMIuGXUAAkqwp.jpg);
@@ -547,9 +555,9 @@ li svg {
   100% {
     background-image: url(https://i.pinimg.com/originals/2a/f8/80/2af880a7df679349cb8f55449cc8586c.jpg);
   }
-}
+} */
 
-@keyframes pc__animation {
+/* @keyframes pc__animation {
   0% {
     background-image: url(https://lh3.googleusercontent.com/proxy/V1dag-wmfctOVO-8BCQnYFuUgfkPXpYobYSn5VFqcZ3wkiIeInVq7QF6wFAxORslcw-cessW2UeX105oiWSH6T9UDrpoAqvIRIAWulcm7qO2dM8);
   }
@@ -565,7 +573,7 @@ li svg {
   100% {
     background-image: url(http://www.poleznoe.ru/images/201302/poleznoe.ru_13989.jpg);
   }
-}
+} */
 
 .phone:hover {
   /* top: 50%; */
@@ -597,30 +605,28 @@ li svg {
 
 footer {
   position: relative;
-  background-image: url(https://regnum.ru/uploads/pictures/news/2019/10/06/regnum_picture_15703947741327091_normal.jpg);
+  background-image: url(../img/footer_img.jpg);
   background-size: cover;
   z-index: 100;
 }
 
 footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  right:0;
+  right: 0;
   left: 0;
   background-color: var(--main-bgop-color);
   /* opacity: 1; */
   z-index: -1;
 }
 
-
-
 footer .container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   max-width: 1300px;
 }
 
@@ -629,7 +635,7 @@ footer .container {
   display: flex;
   flex-wrap: wrap;
 
-  border: 1px solid cyan;
+  /* border: 1px solid cyan; */
   width: 100%;
   height: 100vh;
   max-height: 800px;
@@ -650,11 +656,14 @@ footer .container {
 .footer__text h2 {
   margin-bottom: 30px;
   color: white;
+  opacity: 1;
 }
 
 .footer__text p {
   margin-bottom: 70px;
   color: white;
+  opacity: 1;
+
 }
 
 .social__link {
@@ -693,7 +702,9 @@ form input {
   padding: 9px;
   width: 80%;
   outline: none;
-  background-color: transparent;
+  background-color: var(--main-bgop-color);
+
+  /* background-color: transparent; */
   border: 1px solid rgb(202, 202, 202);
   color: white;
 }
@@ -704,7 +715,7 @@ form input {
 
 .email {
   margin-bottom: 25px;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 
 textarea {
@@ -714,17 +725,35 @@ textarea {
   width: 80%;
   height: 150px;
   outline: none;
-  background-color: transparent;
+  /* background-color: transparent;*/
+  background-color: var(--main-bgop-color);
+
   border: 1px solid rgb(196, 195, 195);
   color: white;
+}
+
+form input:focus {
+  border: 1px solid rgb(255, 252, 252);
+  box-shadow: 0px 5px 70px 2px rgba(228, 212, 212, 0.45);
+
+
+}
+
+form textarea:focus {
+  border: 1px solid rgb(255, 252, 252);
+  box-shadow: 0px 5px 70px 2px rgba(228, 212, 212, 0.45);
+
+
 }
 
 .form__btn {
   width: 80%;
   padding: 8px 0;
   outline: none;
-  background-color: rgba(225, 70, 45, 1);
+  /* background-color: rgba(225, 70, 45, 1); */
   border: 1px solid rgb(209, 205, 205);
+  background-color: var(--main-bgop-color);
+
   color: white;
   cursor: pointer;
 }
