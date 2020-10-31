@@ -34,6 +34,7 @@ nav {
   background-color: var(--main-bg-color);
   display: flex;
   justify-content: flex-end;
+  padding: 25px;
 }
 
 ul {
@@ -154,11 +155,13 @@ header .container {
 }
 
 .nav__link {
-  padding: 20px 45px;
+  padding: 10px 45px;
   display: inline-block;
   color: white;
   text-transform: uppercase;
   font-weight: 700;
+  position: relative;
+  overflow: hidden;
 }
 
 main {
@@ -654,6 +657,7 @@ footer .container {
 }
 
 .footer__text h2 {
+  text-align: left;
   margin-bottom: 30px;
   color: white;
   opacity: 1;
@@ -669,8 +673,15 @@ footer .container {
 .social__link {
   display: inline-block;
   outline: 1px solid grey;
+  border: none;
   padding: 8px 12px;
   color: white;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  font-family: Lato;
+  width: auto;
+  font-size: 16px;
+  margin: 0;
 }
 
 .footer__social li {
@@ -707,6 +718,7 @@ form input {
   /* background-color: transparent; */
   border: 1px solid rgb(202, 202, 202);
   color: white;
+  transition: 1.2s;
 }
 
 .name {
@@ -730,6 +742,8 @@ textarea {
 
   border: 1px solid rgb(196, 195, 195);
   color: white;
+  transition: 1.5s;
+
 }
 
 form input:focus {
@@ -756,4 +770,43 @@ form textarea:focus {
 
   color: white;
   cursor: pointer;
+}
+
+
+.footer__links {
+  text-align: center;
+}
+
+.footer__links li {
+  opacity: 0.7;
+}
+
+.footer__links li:hover {
+  opacity: 1;
+}
+
+.copyright {
+  text-align: center;
+  color:white;
+  padding: 15px;
+  opacity: 0.6;
+}
+
+.nav__link:after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background: red;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav__link:hover:after {
+  width: 100%;
 }

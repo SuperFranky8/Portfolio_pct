@@ -14,13 +14,13 @@
             <div class="logo"><img class="logo__img" src="" alt=""></div>
             <ul>
                 <li class= "nav__item"><a class="nav__link" href=""> Home    </a></li>
-                <li class= "nav__item"><a class="nav__link" href=""> Galery  </a> </li>
-                <li class= "nav__item"><a class="nav__link" href=""> About   </a> </li>
-                <li class= "nav__item"><a class="nav__link" href=""> Contacts</a>  </li>
+                <li class= "nav__item"><a class="nav__link" href="#galery"> Galery  </a> </li>
+                <li class= "nav__item"><a class="nav__link" href="#about"> About   </a> </li>
+                <li class= "nav__item"><a class="nav__link" href="#contacts"> Contacts</a>  </li>
             </ul>
         </nav>
 
-<header>
+<header id="home">
 
 
 
@@ -89,7 +89,7 @@
     </section>
 
 
-    <section class="about">
+    <section class="about" id="about">
 
         <div class="container" id="containerAbout">
 
@@ -161,7 +161,7 @@
 
 </main>
 
-<footer>
+<footer id="contacts">
 
     <div class="container">
     
@@ -171,10 +171,10 @@
             <p class="footer__text_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, libero? Voluptatum inventore quod sint, esse enim consectetur eius amet aliquam praesentium necessitatibus reprehenderit eum quaerat.</p>
 
                 <ul class="footer__social">
-                    <li><a class="social__link" href="/"><i class="fab fa-vk"></i> VKontakte </a></li>
-                    <li><a class="social__link" href="/"><i class="fab fa-telegram-plane"></i> Telegram</a></li>
-                    <li><a class="social__link" href="/"><i class="fab fa-github"></i>Github</a></li>
-                    <li><a class="social__link" href="/"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+                    <li><a class="social__link btn" href="/"><i class="fab fa-vk"></i> VKontakte </a></li>
+                    <li><a class="social__link btn" href="/"><i class="fab fa-telegram-plane"></i> Telegram</a></li>
+                    <li><a class="social__link btn" href="/"><i class="fab fa-github"></i>Github</a></li>
+                    <li><a class="social__link btn" href="/"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
                 </ul>
         </div>    
     
@@ -191,14 +191,20 @@
   
 
     <div>
-        <ul id="footer__links">
+        <!-- <ul id="footer__links">
         <li></li>
         <li></li>
         <li></li>
         <li></li>
+    </ul> -->
+    <ul class="footer__links">
+        <li class= "nav__item"><a class="nav__link" href="#home"> Home    </a></li>
+        <li class= "nav__item"><a class="nav__link" href="#galery"> Galery  </a> </li>
+        <li class= "nav__item"><a class="nav__link" href="#about"> About   </a> </li>
+        <li class= "nav__item"><a class="nav__link" href="#contacts"> Contacts</a>  </li>
     </ul>
 </div>
-<p>Copyrights 2020</p>
+<p class="copyright">Copyrights 2020</p>
 </div>
 </footer>
 
