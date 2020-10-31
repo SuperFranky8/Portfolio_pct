@@ -49,6 +49,25 @@
   }
 }
 
+@keyframes reactrotating {
+  0% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes brotating {
+  0% {
+    transform: rotateX(25deg);
+  }
+  100% {
+    transform: rotateX(1turn);
+  }
+}
+
+
 /* .superitem1 {
   animation-name: rotating;
   animation-iteration-count: infinite;
