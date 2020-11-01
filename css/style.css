@@ -369,7 +369,7 @@ main .container {
 .about__description {
   display: flex;
   flex: 1 0 500px;
-  max-width: ;
+  max-width: 100%;
 
   /* width: 50%; */
   padding: 0 25px;
@@ -626,10 +626,10 @@ footer::before {
 }
 
 footer .container {
-  margin: 0 auto;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
+  border: 1px solid cyan;
   max-width: 1300px;
 }
 
@@ -646,6 +646,7 @@ footer .container {
   box-sizing: border-box;
 }
 
+
 .footer__text {
   box-sizing: border-box;
   display: flex;
@@ -653,7 +654,7 @@ footer .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 40px;
+  padding: 0px 40px 30px;
 }
 
 .footer__text h2 {
@@ -707,6 +708,7 @@ form {
   align-items: center;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px 0;
 }
 
 form input {
@@ -718,7 +720,11 @@ form input {
   /* background-color: transparent; */
   border: 1px solid rgb(202, 202, 202);
   color: white;
-  transition: 1.2s;
+  transition: 0.5s;
+}
+
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .name {
@@ -742,8 +748,11 @@ textarea {
 
   border: 1px solid rgb(196, 195, 195);
   color: white;
-  transition: 1.5s;
+  transition: 0.5s;
+}
 
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 form input:focus {
@@ -810,3 +819,51 @@ form textarea:focus {
 .nav__link:hover:after {
   width: 100%;
 }
+
+
+@media (max-width: 920px) {
+  .footer__wrapper {
+    height: auto;
+    max-height: none;
+  }
+
+  .galery__case {
+    flex: 1 0 auto;
+    height: 400px; 
+  }
+
+
+}
+
+@media (max-width:700px) {
+
+
+  .about__skills_list li {
+    width: 30%;
+    text-align: left;
+    margin-bottom: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__skills_list {
+    flex-wrap: wrap;
+  }
+
+  .about__cv_decor {
+    display: none;
+  }
+
+  #containerAbout {
+    padding-bottom: 50px;
+  }
+
+  .galery__case {
+    flex: 1 0 auto;
+    height: 350px; 
+  }
+
+}
+
