@@ -832,6 +832,13 @@ form textarea:focus {
     height: 400px; 
   }
 
+  .galery__case:nth-child(odd) {
+    transform: translateX(0px);
+    }
+  
+    .galery__case:nth-child(even) {
+      transform: translateX(0px);
+      }
 
 }
 
@@ -867,3 +874,46 @@ form textarea:focus {
 
 }
 
+@media (max-width:550px) {
+
+
+  .galery__case {
+    padding: 5px;
+    flex: 1 0 auto;
+    height: 250px; 
+  }
+
+  .galery__case:nth-child(odd) {
+  transform: translateX(0px);
+  }
+
+  .galery__case:nth-child(even) {
+    transform: translateX(0px);
+    }
+
+    #contact__form {
+  flex: 1 0 300px;
+
+    }
+
+    .footer__text {
+  flex: 1 0 300px;
+
+    }
+
+}
+
+
+@media (max-width: 435px) {
+
+  .heading__container h1 {
+    text-align: left;
+  }
+
+
+  .galery__case {
+    padding: 5px;
+    flex: 1 0 auto;
+    height: 200px; 
+  }
+}
