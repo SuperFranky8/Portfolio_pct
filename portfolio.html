@@ -179,10 +179,10 @@
         </div>    
     
     <div id="contact__form">
-<form action="">
-    <input type="text" class="name" placeholder="Name">
-    <input type="email" class="email" placeholder="Email">
-    <textarea class="text" placeholder="Type your message"></textarea>
+<form method="post" id="form">
+    <input type="text" class="name" placeholder="Name" name="clientName">
+    <input type="email" class="email" placeholder="Email" name="clientEmail">
+    <textarea class="text" placeholder="Type your message" name="clientText"></textarea>
     <button class="form__btn btn">Send Message</button> 
 </form>
     </div>
@@ -215,6 +215,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
-	<script src="canvas_script.js"></script>
+    <script src="canvas_script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
